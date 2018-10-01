@@ -6,7 +6,158 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+    <header class="page-header">
+      <a class="page-header__logo" href="#">
+        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="logo">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__open-button" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__catalog" href="#">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__order" href="#">Вязание на заказ</a>
+            </li>
+            <li class="site-list__item">
+              <input class="site-list__search" type="search">
+              <span class="site-list__search-logo"></span>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__search-logo" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <section class="promo">
+          <div class="page__header header-index">
+            <h1 class="page-title">Милые штуки ручной работы для дома</h1>
+          </div>
+        <div class="promo__interior">
+          <a class="promo__interior__link" href="#">
+            <span class="promo__interior__name">Предметы интерьера</span>
+            <span class="promo__interior__logo logo-interior"></span>
+          </a>
+        </div>
+        <div class="promo__toy">
+          <a class="promo__interior__link" href="#">
+            <span class="promo__interior__name">Детские игрушки</span>
+            <span class="promo__interior__logo logo-toy"></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="item__week">
+        <h2 class="item__week__name title-page">Вязаные корзинки</h2>
+        <span class="item__week__subject subject--item-week">Товар недели</span>
+        <p class="page-text item__week__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="item__week__table">
+          <tbody>
+            <tr class="table__tr">
+              <td class="page-text">Цвет</td>
+              <td class="page-text">«Тиффани»/серый</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="page-text">Диаметр</td>
+              <td class="page-text">25 см</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="page-text">Высота</td>
+              <td class="page-text">15 см</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="item__week__product">
+          <img class="item__week__product__basket" src="http://placehold.it/150x100" width="260" height="315" alt="Basket">
+          <span class="item__week__product__price subject">Цена: 990 руб.</span>
+          <a class="button button--buy" href="#">Заказать</a>
+        </div>
+      </section>
+
+      <section class="company-info">
+        <h2 class="company-info__title title-page">Коротко о нас:</h2>
+        <div class="company-info__advantage">
+          <span class="advantage__logo advantage__logo--flower"></span>
+          <span class="advantage__text subject">Экологически чистые материалы</span>
+        </div>
+        <div class="company-info__advantage">
+          <span class="advantage__logo advantage__logo--price"></span>
+          <span class="advantage__text subject">Скандинавский стиль по российской цене</span>
+        </div>
+        <div class="company-info__advantage">
+          <span class="advantage__logo advantage__logo--like"></span>
+          <span class="advantage__text subject">Увеличивает лайки на фотографиях</span>
+        </div>
+        <div class="company-info__advantage">
+          <span class="advantage__logo advantage__logo--ball"></span>
+          <span class="advantage__text subject">Связано вручную с любовью и умилением</span>
+        </div>
+        <div class="company-info__advantage">
+          <span class="advantage__logo advantage__logo--rocket"></span>
+          <span class="advantage__text subject">Поддержка отечественного производителя</span>
+        </div>
+        <div class="company-info__advantage">
+          <span class="advantage__logo advantage__logo--gift"></span>
+          <span class="advantage__text subject">Поставляется в подарочной упаковке</span>
+        </div>
+      </section>
+
+      <section class="comment">
+        <h2 class="comment__title title-page">Отзывы</h2>
+        <div class="comment__list">
+          <p class="page-text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <div class="comment__profile">
+            <span class="profile__name">Анастасия Красильникова</span>
+            <span class="profile__nickname">@misssssiskras</span>
+          </div>
+          <div class="button-place">
+            <button class="button-place__left" type="button" name="button-right">Влево</button>
+            <button class="button-place__right" type="button" name="button-left">Вправо</button>
+            <a class="button button__write" href="#">Написать</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2 class="contact__title title-page">Контакты</h2>
+        <table class="contact__table">
+          <tbody>
+            <tr class="page-text__mail">
+              <td>email:</td>
+              <td class="page-text__email">info@mishkashop.ru</td>
+            </tr>
+            <tr class="page-text__address">
+              <td>адрес:</td>
+              <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="contact__map">
+          <img class="contact__map__position" src="http://placehold.it/150x100" width="320" height="457" alt="Map">
+        </div>
+        <a class="button button__contact-write" href="#">Напишите нам</a>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+
+      <div class="page-footer__social">
+        <span class="social__logo logo-ins" width="22" height="21"></span>
+        <span class="social__logo logo-fb" width="15" height="28"></span>
+        <span class="social__logo logo-tw" width="23" height="20"></span>
+      </div>
+      <div class="page-footer__develope">
+        <span class="page-footer__develope__text">Разработано</span>
+        <a class="page-footer__develope__link" href="#"><span class="develope__logo html-academy" width="27" height="34"></span></a>
+      </div>
+
+    </footer>
 
   </body>
 </html>
