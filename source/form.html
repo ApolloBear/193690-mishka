@@ -11,77 +11,108 @@
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="logo">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__open-button" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__catalog" href="#">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__order" href="#">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item">
-              <input class="site-list__search" type="search">
-              <span class="site-list__search-logo"></span>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__search-logo" href="#">Корзина</a>
-            </li>
-          </ul>
-        </div>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--basket" href="#">Корзина</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="page-main">
 
-      <section class="page__header header-form">
+      <section class="page-header">
         <h1 class="page-title">Каталог товаров</h1>
       </section>
 
       <section class="order">
         <p class="order_preview page-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="order__form" action="index.html" method="post">
+        <form class="order__form custom" action="index.html" method="post">
           <fieldset>
             <legend class="caption caption--legend">Тип</legend>
-            <input class="input-radio" type="radio" id="accessory"><label class="caption" for="accessory">Аксессуар для интерьера</label>
-            <input class="input-radio" type="radio" id="toy"><label class="caption" for="toy">Детская игрушка</label>
+            <div class="custom__item-radio">
+              <input class="input-radio" type="radio" id="accessory">
+              <label class="caption" for="accessory">Аксессуар для интерьера</label>
+            </div>
+            <div class="custom__item-radio">
+              <input class="input-radio" type="radio" id="toy">
+              <label class="caption" for="toy">Детская игрушка</label>
+            </div>
           </fieldset>
           <fieldset>
             <legend class="caption caption--legend">Цвет</legend>
-            <input class="input-checkbox" type="checkbox" id="toy"><label class="caption" for="toy">Белый</label>
-            <input class="input-checkbox" type="checkbox" id="toy"><label class="caption" for="toy">Серый</label>
-            <input class="input-checkbox" type="checkbox" id="toy"><label class="caption" for="toy">Тиффани</label>
-            <input class="input-checkbox" type="checkbox" id="toy"><label class="caption" for="toy">Чёрный</label>
-            <input class="input-checkbox" type="checkbox" id="toy"><label class="caption" for="toy">Розовый</label>
-            <input class="input-checkbox" type="checkbox" id="toy"><label class="caption" for="toy">Оранжевый</label>
+            <div class="custom__item-checkbox">
+              <input class="input-checkbox" type="checkbox" id="toy">
+              <label class="caption" for="toy">Белый</label>
+            </div>
+            <div class="custom__item-checkbox">
+              <input class="input-checkbox" type="checkbox" id="toy">
+              <label class="caption" for="toy">Серый</label>
+            </div>
+            <div class="custom__item-checkbox">
+              <input class="input-checkbox" type="checkbox" id="toy">
+              <label class="caption" for="toy">Тиффани</label>
+            </div>
+            <div class="custom__item-checkbox">
+              <input class="input-checkbox" type="checkbox" id="toy">
+              <label class="caption" for="toy">Чёрный</label>
+            </div>
+            <div class="custom__item-checkbox">
+              <input class="input-checkbox" type="checkbox" id="toy">
+              <label class="caption" for="toy">Розовый</label>
+            </div>
+            <div class="custom__item-checkbox">
+              <input class="input-checkbox" type="checkbox" id="toy">
+              <label class="caption" for="toy">Оранжевый</label>
+            </div>
           </fieldset>
           <fieldset>
             <legend class="caption caption--legend">ФИО</legend>
-            <label class="caption" for="name">Имя:</label>
-            <input class="input-text" id="name" type="text" name="" value="Введите ваше имя*" required>
-            <label class="caption" for="surname">Фамилия:</label>
-            <input class="input-text" id="surname" type="text" name="" value="Укажите фамилию*" required>
-            <label class="caption" for="patronymic">Отчество:</label>
-            <input class="input-text" id="patronymic" type="text" name="" value="Отчество, если делаете">
+            <div class="custom__item-text">
+              <label class="caption" for="name">Имя:</label>
+              <input class="input-text" id="name" type="text" name="" value="Введите ваше имя*" required>
+            </div>
+            <div class="custom__item-text">
+              <label class="caption" for="surname">Фамилия:</label>
+              <input class="input-text" id="surname" type="text" name="" value="Укажите фамилию*" required>
+            </div>
+            <div class="custom__item-text">
+              <label class="caption" for="patronymic">Отчество:</label>
+              <input class="input-text" id="patronymic" type="text" name="" value="Отчество, если делаете">
+            </div>
           </fieldset>
           <fieldset>
             <legend class="caption caption--legend">Тел</legend>
-            <input id="tel" type="text" name="" value="+7 XXX XXX XX XX*" required>
-            <label for="tel"></label>
-            <span class="logo-tel"></span>
+            <div class="custom__item-text">
+              <input class="input-text input-text--logo-telefon" id="tel" type="text" name="" value="+7 XXX XXX XX XX*" required>
+              <label for="tel"></label>
+            </div>
           </fieldset>
           <fieldset>
             <legend class="caption caption--legend">E-mail</legend>
-            <input id="email" type="text" name="" value="Ваш Email*">
-            <label for="email"></label>
-            <span class="logo-email"></span>
+            <div class="custom__item-text">
+              <input class="input-text input-text--logo-email" id="email" type="text" name="" value="Ваш Email*">
+              <label for="email"></label>
+            </div>
           </fieldset>
           <fieldset>
             <legend class="caption caption--legend">Доп</legend>
-            <textarea rows="10" cols="45" name="text" value="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="custom__item-textarea">
+              <textarea rows="10" cols="45" name="text" value="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
           </fieldset>
           <span class="page-text page-text--for-form">*Поля обязательные для заполнения</span>
-          <button class="button button--for-form" type="submit" name="button">Отправить заказ</button>
+          <button class="button" type="submit" name="button">Отправить заказ</button>
         </form>
       </section>
 
@@ -89,14 +120,27 @@
 
     <footer class="page-footer">
 
-      <div class="page-footer__social">
-        <span class="social__logo logo-ins" width="22" height="21"></span>
-        <span class="social__logo logo-fb" width="15" height="28"></span>
-        <span class="social__logo logo-tw" width="23" height="20"></span>
-      </div>
-      <div class="page-footer__develope">
-        <span class="page-footer__develope__text">Разработано</span>
-        <a class="page-footer__develope__link" href="#"><span class="develope__logo html-academy" width="27" height="34"></span></a>
+      <ul class="page-footer__social social">
+        <li>
+          <a class="social__link">
+            <img class="logo-instagram" src="http://placehold.it/150x100" width="27" height="34">
+          </a>
+        </li>
+        <li>
+          <a class="social__link">
+            <img class="logo-facebook" src="http://placehold.it/150x100" width="27" height="34">
+          </a>
+        </li>
+        <li><a class="social__link">
+            <img class="logo-twitter" src="http://placehold.it/150x100" width="27" height="34">
+            </a>
+        </li>
+      </ul>
+      <div class="page-footer__develope copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__link" href="#">
+          <img class="copyright__logo html-academy" width="27" height="34">
+        </a>
       </div>
 
     </footer>
