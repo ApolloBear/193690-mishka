@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
-  <body class="body">
+  <body>
 
     <header class="page-header">
       <a class="page-header__logo" href="#">
@@ -40,7 +40,7 @@
       <section class="order">
         <p class="order__preview page-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="order__form form" action="index.html" method="post">
-          <fieldset>
+          <fieldset class="form__item">
             <legend class="caption caption--legend">Тип</legend>
             <div class="form__item-radio">
               <input class="input-radio" type="radio" id="accessory">
@@ -51,7 +51,7 @@
               <label class="caption" for="toy">Детская игрушка</label>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__item">
             <legend class="caption caption--legend">Цвет</legend>
             <div class="form__item-checkbox">
               <input class="input-checkbox" type="checkbox" id="toy">
@@ -78,7 +78,7 @@
               <label class="caption" for="toy">Оранжевый</label>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__item">
             <legend class="caption caption--legend">ФИО</legend>
             <div class="form__item-text">
               <label class="caption" for="name">Имя:</label>
@@ -93,27 +93,27 @@
               <input class="input-text" id="patronymic" type="text" name="" value="Отчество, если делаете">
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__item">
             <legend class="caption caption--legend">Тел</legend>
             <div class="form__item-text">
               <input class="input-text input-text--logo-telefon" id="tel" type="text" name="" value="+7 XXX XXX XX XX*" required>
               <label for="tel"></label>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__item">
             <legend class="caption caption--legend">E-mail</legend>
             <div class="form__item-text">
               <input class="input-text input-text--logo-email" id="email" type="text" name="" value="Ваш Email*">
               <label for="email"></label>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__item">
             <legend class="caption caption--legend">Доп</legend>
             <div class="form__item-textarea">
               <textarea rows="10" cols="45" name="text" value="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
-          <span class="page-text page-text--for-form">*Поля обязательные для заполнения</span>
+          <span class="page-text page-text--required">*Поля обязательные для заполнения</span>
           <button class="button" type="submit" name="button">Отправить заказ</button>
         </form>
       </section>
