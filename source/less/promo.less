@@ -6,6 +6,7 @@
   text-decoration: none;
   padding-top: 28px;
   padding-bottom: 27px;
+  display: block;
 
   &--interior {
     background: #63d1bb;
@@ -13,5 +14,19 @@
 
   &--toy {
     background: #56c3b2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo__link {
+    width: 334px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__link {
+    width: 525px;
+    display: inline-block;
   }
 }

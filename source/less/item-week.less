@@ -27,3 +27,40 @@
 .item-week__image {
   display: block;
 }
+
+@media (min-width: @tablet-width) {
+  .item-week__name {
+    display: inline-block;
+  }
+
+  .item-week__subject {
+    display: inline-block;
+  }
+
+  .item-week__text {
+    width: 400px;
+  }
+
+  .item-week__product {
+    position: relative;
+  }
+
+  .item-week__image {
+    position: absolute;
+    top: -240px;
+    right: 100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item-week {
+    padding-left: 175px;
+    position: relative;
+  }
+
+  .item-week__subject {
+    position: absolute;
+    top: 140px;
+    left: 38px;
+  }
+}
