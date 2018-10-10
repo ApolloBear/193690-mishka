@@ -1,3 +1,60 @@
+.form {
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 567px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 567px;
+  }
+}
+
 .form__item {
   margin-bottom: 32px;
+}
+
+.form__item-size {
+  display: inline-block;
+}
+
+@media (min-width: @tablet-width) {
+  .form__item {
+    position: relative;
+    padding-left: 70px;
+
+    &--row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .caption--legend {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+
+  .form__item-checkbox {
+    width: 230px;
+  }
+
+  .page-text--required {
+    display: inline-block;
+  }
+
+  .order .button {
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__item--row {
+    width: 800px;
+  }
 }

@@ -11,3 +11,26 @@
   padding-top: 22px;
   padding-bottom: 23px;
 }
+
+.social__item {
+  display: inline-block;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__social {
+    display: inline-block;
+  }
+
+  .page-footer__social::before {
+    content: "";
+    display: inline-block;
+    width: 102px;
+    height: 35px;
+    background-image: url("/img/logo-footer.svg");
+    background-repeat: no-repeat;
+  }
+
+  .page-footer__develope {
+    display: inline-block;
+  }
+}

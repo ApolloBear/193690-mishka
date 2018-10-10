@@ -1,9 +1,11 @@
 .catalog__item {
+  display: block;
   border: 1px solid #ededed;
   margin-bottom: 30px;
 }
 
 .catalog-item__name {
+  display: block;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -15,4 +17,26 @@
   line-height: 24px;
   font-weight: bold;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-item__img {
+    float: left;
+  }
+
+  .catalog-item::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-item__img {
+    float: none;
+  }
+
+  .catalog__item {
+    display: inline-block;
+  }
 }

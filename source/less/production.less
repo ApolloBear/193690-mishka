@@ -14,3 +14,48 @@
   font-size: 13px;
   line-height: 24px;
 }
+
+@media (min-width: @tablet-width) {
+  .production {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production__image {
+    order: 0;
+    width: 668px;
+    height: 455px;
+  }
+
+  .production__name {
+    order: 1;
+  }
+
+  .production__text {
+    order: 2;
+  }
+
+  .production .button {
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    display: block;
+  }
+
+  .production::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  .production__image {
+    float: left;
+  }
+
+  .production .button {
+    display: inline-block;
+  }
+}
