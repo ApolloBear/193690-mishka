@@ -23,19 +23,29 @@
   margin-right: 0;
 }
 
+.social__item--mishka {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
-  .page-footer__social::before {
-    content: "";
-    width: 102px;
-    height: 35px;
-    background-image: url("../img/logo-footer.svg");
-    background-repeat: no-repeat;
+  .social__item--mishka {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
   }
-
-  .page-footer__develope {
-    display: inline-block;
-  }
+  // .page-footer__social::before {
+  //   content: "";
+  //   width: 102px;
+  //   height: 35px;
+  //   background-image: url("../img/logo-footer.svg");
+  //   background-repeat: no-repeat;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
+  //
+  // .page-footer__develope {
+  //   display: inline-block;
+  // }
 }
