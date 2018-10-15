@@ -4,6 +4,7 @@
 }
 
 .production__name {
+  display: block;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -16,46 +17,23 @@
 }
 
 @media (min-width: @tablet-width) {
-  .production {
-    display: flex;
-    flex-direction: column;
-  }
-
   .production__image {
-    order: 0;
     width: 668px;
     height: 455px;
-  }
-
-  .production__name {
-    order: 1;
-  }
-
-  .production__text {
-    order: 2;
-  }
-
-  .production .button {
-    order: 3;
   }
 }
 
 @media (min-width: @desktop-width) {
   .production {
-    display: block;
-  }
-
-  .production::after {
-    content: "";
-    clear: both;
-    display: block;
+    padding-left: 680px;
+    position: relative;
   }
 
   .production__image {
-    float: left;
-  }
-
-  .production .button {
-    display: inline-block;
+    display: block;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

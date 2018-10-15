@@ -29,26 +29,25 @@
 }
 
 @media (min-width: @tablet-width) {
-  .item-week__name {
-    display: inline-block;
+  .item-week__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .item-week__content {
+    position: relative;
+    padding: 0 260px 0 0;
   }
 
   .item-week__subject {
-    display: inline-block;
-  }
-
-  .item-week__text {
-    width: 400px;
-  }
-
-  .item-week__product {
-    position: relative;
+    margin: 0;
   }
 
   .item-week__image {
     position: absolute;
-    top: -240px;
-    right: 100px;
+    top: 0;
+    right: 0;
   }
 }
 

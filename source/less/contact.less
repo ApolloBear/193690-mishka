@@ -1,23 +1,19 @@
-.contact__table {
-  margin-top: 38px;
-  margin-bottom: 35px;
-}
-
-.contact__map-position {
-  margin-bottom: 39px;
+.contact {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: @desktop-width) {
   .contact {
-    width: 1050px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
   }
 
-  .contact__table {
-    width: 525px;
-    display: inline-block;
-  }
-
-  .contact__map-position {
-    display: inline-block;
+  .contact .button {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
   }
 }
