@@ -1,0 +1,28 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.user-list__link {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.user-list__item {
+  padding-top: 29px;
+  padding-bottom: 30px;
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    flex-direction: row;
+    padding-left: 100px;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+}

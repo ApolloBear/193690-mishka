@@ -1,9 +1,15 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalog__item {
   border: 1px solid #ededed;
   margin-bottom: 30px;
 }
 
 .catalog-item__name {
+  display: block;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -15,4 +21,35 @@
   line-height: 24px;
   font-weight: bold;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-item__image {
+    width: 50%;
+  }
+
+  .catalog-item__info {
+    width: 50%;
+  }
+
+  .catalog__item {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    flex-direction: row;
+  }
+
+  .catalog__item {
+    width: 33.3%;
+    margin: 0 25px;
+    flex-direction: column;
+  }
+
+  .catalog-item__info {
+    width: 100%;
+  }
 }
