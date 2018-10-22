@@ -1,0 +1,66 @@
+.contact {
+  padding-top: 40px;
+  padding-bottom: 39px;
+  text-align: center;
+}
+
+.contact__button {
+  padding-left: 51px;
+  padding-right: 51px;
+}
+
+@media (min-width: @tablet-width) {
+  .contact {
+    padding-top: 68px;
+    padding-bottom: 57px;
+    position: relative;
+  }
+
+  .contact__info::after {
+    content: "";
+    width: 51px;
+    height: 83px;
+    position: absolute;
+    top: 46px;
+    right: 0;
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+  }
+
+  .contact-info__map::after {
+    content: "";
+    width: 71px;
+    height: 96px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact {
+    padding-top: 150px;
+    padding-bottom: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .contact .button {
+    position: absolute;
+    bottom: 110px;
+    left: 200px;
+  }
+
+  .contact__info {
+    flex-direction: row;
+  }
+
+  .contact__info::after {
+    top: 133px;
+    left: 63px;
+  }
+}

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
@@ -84,27 +83,29 @@
 
         <section class="production">
           <span class="production__name">Процесс производства</span>
-          <img class="production__image" src="img/video-mobile@1x.jpg" alt="Видео процесса производства">
+          <div class="production__video preview-video">
+            <img class="preview-video__image" src="img/video-mobile@1x.jpg" alt="Видео процесса производства">
+          </div>
           <p class="page-text production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="button" href="#">Сделать заказ</a>
         </section>
 
-        <section class="pop-up hidden">
+        <section class="pop-up pop-up-hidden">
           <span class="pop-up__header">Добавить в корзину</span>
           <span class="page-text">Выберите размер:</span>
           <form class="pop-up__choice-size form" action="index.html" method="post">
             <fieldset>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory">
-                <label class="caption" for="accessory">S</label>
+                <input class="input-size" type="radio" name="accessory" value="s" id="accessory-s">
+                <label class="caption" for="accessory-s">S</label>
               </div>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory">
-                <label class="caption" for="accessory">M</label>
+                <input class="input-size" type="radio" name="accessory" value="m" id="accessory-m">
+                <label class="caption" for="accessory-m">M</label>
               </div>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory">
-                <label class="caption" for="accessory">L</label>
+                <input class="input-size" type="radio" name="accessory" value="l" id="accessory-l">
+                <label class="caption" for="accessory-l">L</label>
               </div>
             </fieldset>
             <button class="button button--aqua" type="submit" name="button">Добавить</button>
@@ -116,7 +117,10 @@
 
     <footer class="page-footer">
 
-      <div class="container">
+      <div class="container page-footer__inner">
+        <a class="page-footer__logo">
+          <img class="logo-mishka" src="img/logo-footer.svg" width="" height="">
+        </a>
         <ul class="page-footer__social social">
           <li class="social__item">
             <a class="social__link">

@@ -11,15 +11,23 @@
   color: #000000;
 }
 
+.preview-video__image {
+  width: 100%;
+}
+
 .production__text {
   font-size: 13px;
   line-height: 24px;
 }
 
 @media (min-width: @tablet-width) {
-  .production__image {
-    width: 668px;
-    height: 455px;
+  .production {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production__video {
+    order: -1;
   }
 }
 
@@ -29,9 +37,7 @@
     position: relative;
   }
 
-  .production__image {
-    display: block;
-    max-height: 100%;
+  .production__video {
     position: absolute;
     top: 0;
     left: 0;

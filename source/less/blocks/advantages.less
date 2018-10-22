@@ -1,0 +1,116 @@
+.advantages__item {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000000;
+  padding-top: 57px;
+  padding-bottom: 27px;
+  list-style: none;
+  position: relative;
+}
+
+.advantages__item--flower::after {
+  content: "";
+  width: 34px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-feature-flower.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__item--price::after {
+  content: "";
+  width: 47px;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-feature-money.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__item--like::after {
+  content: "";
+  width: 34px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-feature-heart.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__item--ball::after {
+  content: "";
+  width: 34px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-feature-ball.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__item--rocket::after {
+  content: "";
+  width: 55px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-feature-rocket.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__item--gift::after {
+  content: "";
+  width: 34px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-feature-gift.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    font-size: 20px;
+    line-height: 22px;
+    width: 50%;
+    padding-right: 30px;
+    box-sizing: border-box;
+
+    &--flower {
+      order: 0;
+    }
+
+    &--ball {
+      order: 1;
+    }
+
+    &--price {
+      order: 2;
+    }
+
+    &--rocket {
+      order: 3;
+    }
+
+    &--like {
+      order: 4;
+    }
+
+    &--gift {
+      order: 5;
+    }
+  }
+}

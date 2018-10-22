@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
@@ -16,8 +15,8 @@
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="logo">
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <ul class="main-nav__list site-list">
+          <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list site-list hidden">
             <li class="site-list__item">
               <a class="site-list__link" href="#">Каталог товаров</a>
             </li>
@@ -25,7 +24,7 @@
               <a class="site-list__link" href="#">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__list user-list hidden">
             <li class="user-list__item">
               <a class="user-list__link site-list__link--search" href="#">Поиск по сайту</a>
             </li>
@@ -41,14 +40,13 @@
 
       <div class="page-head page-head--toys">
         <div class="container">
-          <h1 class="page-title">Милые штуки ручной работы для дома</h1>
+          <h1 class="page-title page-title--toys">Милые штуки ручной работы для дома</h1>
+          <section class="promo">
+            <a class="promo__link promo__link--interior" href="#"><span class="promo__text">Предметы интерьера</span></a>
+            <a class="promo__link promo__link--toy" href="#"><span class="promo__text">Детские игрушки</span></a>
+          </section>
         </div>
       </div>
-
-      <section class="promo">
-        <a class="promo__link promo__link--interior" href="#">Предметы интерьера</a>
-        <a class="promo__link promo__link--toy" href="#">Детские игрушки</a>
-      </section>
 
       <div class="container">
         <section class="item-week">
@@ -58,8 +56,8 @@
           </div>
           <div class="item-week__content">
             <p class="item-week__text page-text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-            <table class="item-week__table page-text">
-              <tbody>
+            <table class="item-week__table">
+              <tbody class="page-text page-text--table">
                 <tr>
                   <td>Цвет</td>
                   <td>«Тиффани»/серый</td>
@@ -74,10 +72,10 @@
                 </tr>
               </tbody>
             </table>
-            <img class="item-week__image" src="/img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Basket">
+            <img class="item-week__image" src="img/triple-set-mobile@1x.jpg" alt="Basket">
             <div class="item-week__product">
               <span class="item-week__price">Цена: 990 руб.</span>
-              <a class="button" href="#">Заказать</a>
+              <a class="button item-week__button" href="#">Заказать</a>
             </div>
           </div>
         </section>
@@ -109,11 +107,19 @@
               <div class="slider__slide"></div>
             </div>
             <div class="slider__controls">
-              <button class="slider__button slider__button--left" type="button" name="button-right">Влево</button>
-              <button class="slider__button slider__button--right" type="button" name="button-left">Вправо</button>
+              <button class="slider__button slider__button--left" type="button" name="button-right">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
+                  <polygon points="50,11.002 7.659,11.002 15.833,2.828 13.005,0 0,12.998 0.003,13.001 0,13.005 13.005,26.003 15.833,23.175 7.661,15.002 50,15.002 "/>
+                </svg>
+              </button>
+              <button class="slider__button slider__button--right" type="button" name="button-left">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
+                  <polygon points="0,11.002 42.341,11.002 34.166,2.828 36.995,0 50,12.998 49.996,13.001 50,13.005 36.995,26.003 34.166,23.175 42.339,15.002 0,15.002 "/>
+                </svg>
+              </button>
             </div>
           </div>
-          <a class="button" href="#">Написать</a>
+          <a class="button comments__button" href="#">Написать</a>
         </section>
 
         <section class="contact">
@@ -121,36 +127,38 @@
             <h2 class="contact-info__title page-subtitle">Контакты</h2>
             <table class="contact-info__table page-text">
               <tbody class="table-items">
-                <tr>
+                <tr class="table-row">
                   <td>email:</td>
-                  <td><a class="link" href="mailto:info@mishkashop.ru">info@mishkashop.ru</a></td>
+                  <td class="table-row__item"><a class="link" href="mailto:info@mishkashop.ru">info@mishkashop.ru</a></td>
                 </tr>
-                <tr>
+                <tr class="table-row">
                   <td>адрес:</td>
                   <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <img class="contact-info__map-position" src="img/map-mobile@1x.jpg" alt="Map">
-          <a class="button" href="#">Напишите нам</a>
+          <div class="contact-info__map">
+            <img class="map-position" src="img/map-mobile@1x.jpg" alt="Map">
+          </div>
+          <a class="button contact__button" href="#">Напишите нам</a>
         </section>
 
-        <section class="pop-up hidden">
+        <section class="pop-up pop-up-hidden">
           <span class="pop-up__header">Добавить в корзину</span>
           <span class="page-text">Выберите размер:</span>
           <form class="pop-up__choice-size form" action="index.html" method="post">
             <fieldset>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory-s">
+                <input class="input-size" type="radio" name="accessory" value="s" id="accessory-s">
                 <label class="caption" for="accessory-s">S</label>
               </div>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory-m">
+                <input class="input-size" type="radio" name="accessory" value="m" id="accessory-m">
                 <label class="caption" for="accessory-m">M</label>
               </div>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory-l">
+                <input class="input-size" type="radio" name="accessory" value="l" id="accessory-l">
                 <label class="caption" for="accessory-l">L</label>
               </div>
             </fieldset>
@@ -158,17 +166,16 @@
           </form>
         </section>
       </div>
+
     </main>
 
     <footer class="page-footer">
 
-      <div class="container">
+      <div class="container page-footer__inner">
+        <a class="page-footer__logo">
+          <img class="logo-mishka" src="img/logo-footer.svg" width="" height="">
+        </a>
         <ul class="page-footer__social social">
-          <li class="social__item social__item--mishka">
-            <a class="social__link">
-              <img class="logo-mishka" src="img/logo-footer.svg" width="" height="">
-            </a>
-          </li>
           <li class="social__item">
             <a class="social__link">
               <img class="logo-instagram" src="img/icon-insta.svg" width="27" height="34">
@@ -194,6 +201,6 @@
       </div>
 
     </footer>
-
+    <script src="js/javascript.js"></script>
   </body>
 </html>

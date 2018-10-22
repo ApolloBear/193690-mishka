@@ -1,0 +1,52 @@
+.page-header {
+  border: 1px solid #ececec;
+}
+
+.page-header__logo-image {
+  display: block;
+  margin: 0 auto;
+  padding-top: 21px;
+  padding-bottom: 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header::before {
+    content: "Новые поступления";
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .page-header::after {
+    content: "Распродажа";
+    position: absolute;
+    top: 100px;
+    left: 261px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

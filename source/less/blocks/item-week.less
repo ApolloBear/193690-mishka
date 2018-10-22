@@ -1,0 +1,130 @@
+.item-week {
+  padding-top: 32px;
+  padding-bottom: 42px;
+}
+
+.item-week__subject {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #63d1bb;
+  display: block;
+}
+
+.item-week__price {
+  display: block;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #444444;
+  margin-bottom: 24px;
+}
+
+.item-week__header {
+  margin-bottom: 28px;
+}
+
+.item-week__button {
+  padding-left: 86px;
+  padding-right: 86px;
+}
+
+.item-week__name {
+  padding-bottom: 10px;
+}
+
+.item-week__table {
+  width: 100%;
+  margin-top: 27px;
+  margin-bottom: 28px;
+}
+
+.item-week__image {
+  display: block;
+}
+
+.item-week__product {
+  margin-top: 27px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .item-week {
+    position: relative;
+    padding-bottom: 75px;
+  }
+
+  .item-week::after {
+    content: "";
+    width: 100%;
+    height: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/bg-zigzag-line.svg");
+  }
+
+  .item-week__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .item-week__table {
+    margin-top: 40px;
+    margin-bottom: 58px;
+  }
+
+  .item-week__content {
+    position: relative;
+    padding: 0 334px 0 0;
+  }
+
+  .item-week__subject {
+    margin: 0;
+    max-width: 100px;
+    text-align: center;
+  }
+
+  .item-week__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .item-week__price {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item-week {
+    padding-top: 132px;
+    padding-left: 175px;
+    padding-bottom: 96px;
+    position: relative;
+  }
+
+  .item-week__table {
+    margin-top: 56px;
+    margin-bottom: 110px;
+  }
+
+  .item-week__subject {
+    position: absolute;
+    top: 149px;
+    left: 38px;
+    line-height: 17px;
+  }
+
+  .item-week__content {
+    padding: 0 525px 0 0;
+  }
+
+  .item-week__text {
+    line-height: 30px;
+  }
+}

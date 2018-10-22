@@ -1,0 +1,43 @@
+.profile__name {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000000;
+  padding-top: 31px;
+  padding-bottom: 8px;
+}
+
+.profile__nickname {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #444444;
+  padding-bottom: 31px;
+}
+
+@media (min-width: @tablet-width) {
+  .profile__nickname {
+    display: block;
+    padding-bottom: 49px;
+  }
+
+  .profile__name {
+    font-size: 18px;
+    padding-top: 63px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .profile__name {
+    font-size: 17px;
+    line-height: 24px;
+    padding-top: 39px;
+    padding-bottom: 7px;
+  }
+
+  .profile__nickname {
+    padding-bottom: 95px;
+  }
+}

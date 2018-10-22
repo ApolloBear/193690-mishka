@@ -1,0 +1,37 @@
+.slider__controls {
+  margin-bottom: 38px;
+}
+
+.slider__button {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 37px;
+  padding-right: 42px;
+  background: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__controls {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+  }
+
+  .slider__button {
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+  }
+
+  .slider__button--right {
+    margin-left: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__controls {
+    position: absolute;
+    bottom: 65px;
+    right: 65px;
+  }
+}
