@@ -5,14 +5,14 @@ var userList = document.querySelector('.user-list');
 var siteList = document.querySelector('.site-list');
 
 navToggle.addEventListener('click', function() {
-  if (navToggle.classList.contains('main-nav__toggle')) {
+  if (navToggle.classList.contains('main-nav__toggle--closed')) {
     navToggle.classList.remove('main-nav__toggle--closed');
     navToggle.classList.add('main-nav__toggle--opened');
     userList.classList.remove('hidden');
     siteList.classList.remove('hidden');
   } else {
-    navToggle.classList.add('main-nav__toggle--closed');
     navToggle.classList.remove('main-nav__toggle--opened');
+    navToggle.classList.add('main-nav__toggle--closed');
     userList.classList.add('hidden');
     siteList.classList.add('hidden');
   }

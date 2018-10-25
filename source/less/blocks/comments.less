@@ -7,16 +7,11 @@
   margin-bottom: 29px;
 }
 
-.comments__button {
-  padding-left: 80px;
-  padding-right: 79px;
-}
-
 @media (min-width: @tablet-width) {
   .comments {
     padding-top: 83px;
     padding-left: 50px;
-    margin: 0 -50px;
+    margin-left: -50px;
     position: relative;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -36,36 +31,27 @@
   .comments__button {
     position: absolute;
     top: 79px;
-    right: 50px;
+    right: 0;
+    width: 171px;
   }
 
   .comments__list {
     position: relative;
     order: 2;
-    padding-right: 50px;
   }
 
   .comments__title {
     padding-bottom: 55px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .comments {
-    padding-left: 175px;
-    margin: 0;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .comments {
+    padding-left: 175px;
     padding-top: 79px;
     padding-bottom: 110px;
-  }
-
-  .comments__button {
-    padding-left: 39px;
-    padding-right: 40px;
+    margin: 0;
   }
 
   .comments__title {

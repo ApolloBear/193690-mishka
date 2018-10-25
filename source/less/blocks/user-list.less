@@ -11,9 +11,22 @@
   font-weight: bold;
   color: #000000;
   text-decoration: none;
+
+  &--basket {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  &--search {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
 }
 
 .user-list__item {
+  position: relative;
   padding-top: 28px;
   padding-bottom: 30px;
   padding-left: 75px;
@@ -24,10 +37,20 @@
 @media (min-width: @tablet-width) {
   .user-list {
     flex-direction: row;
-    padding-left: 50px;
     max-width: 50%;
     box-sizing: border-box;
     margin: 0;
+  }
+
+  .user-list__link--basket {
+    position: static;
+    padding-right: 32px;
+  }
+
+  .user-list__link--search {
+    position: static;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 
   .user-list__item {
