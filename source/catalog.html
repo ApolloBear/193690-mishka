@@ -4,20 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <div class="container">
         <a class="page-header__logo" href="#">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="logo">
+          </picture>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <ul class="main-nav__list site-list">
+          <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list site-list hidden">
             <li class="site-list__item">
               <a class="site-list__link" href="#">Каталог товаров</a>
             </li>
@@ -25,31 +28,44 @@
               <a class="site-list__link" href="#">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
+          <ul class="main-nav__list user-list hidden">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#"><img class="user-list__link--search" src="../img/icon-search.svg" alt="search"><span class="search-text">Поиск по сайту</span></a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--basket" href="#">Корзина</a>
+            <li class="user-list__item">
+              <a class="user-list__link" href="#"><img class="user-list__link--basket" src="../img/icon-cart.svg" alt="search">Корзина<span class="basket-text">: пока пуста</span></a>
             </li>
           </ul>
+          <ul class="main-nav__list desk-list">
+            <li class="desk-list__item">
+              <a class="desk-list__link" href="#">Новые поступления</a>
+            </li>
+            <li class="desk-list__item">
+              <a class="desk-list__link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <span class="page-text main-nav__delivery">Бесплатная доставка по России</span>
         </nav>
       </div>
     </header>
 
     <main class="page-main">
 
-      <section class="page-head">
+      <section class="page-head page-head--line">
         <div class="container">
-          <h1 class="page-title">Каталог товаров</h1>
+          <h1 class="page-title page-title--no-background">Каталог товаров</h1>
         </div>
       </section>
 
       <div class="container">
         <section class="catalog">
           <div class="catalog__item catalog-item">
-            <div class="catalog-item__image">
-              <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Rabbit">
+            <div class="catalog-item__image photo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-hare-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
+                <img class="photo__catalog" src="img/photo-hare-mobile@1x.jpg" alt="Rabbit">
+              </picture>
             </div>
             <div class="catalog-item__info">
               <a class="catalog-item__name">Зайчик-попрыгайчик</a>
@@ -59,8 +75,12 @@
             </div>
           </div>
           <div class="catalog__item catalog-item">
-            <div class="catalog-item__image">
-              <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Basket">
+            <div class="catalog-item__image photo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-bowl-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg">
+                <img class="photo__catalog" src="img/photo-bowl-mobile@1x.jpg" alt="Basket">
+              </picture>
             </div>
             <div class="catalog-item__info">
               <span class="catalog-item__name">Корзина для белья</span>
@@ -70,8 +90,12 @@
             </div>
           </div>
           <div class="catalog__item catalog-item">
-            <div class="catalog-item__image">
-              <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Basket for toy">
+            <div class="catalog-item__image photo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-toys-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg">
+                <img class="photo__catalog" src="img/photo-toys-mobile@1x.jpg" alt="Basket for toy">
+              </picture>
             </div>
             <div class="catalog-item__info">
               <span class="catalog-item__name">Большая корзинка для игрушек</span>
@@ -83,28 +107,42 @@
         </section>
 
         <section class="production">
+          <div class="production__svg-video">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+              <g transform="translate(0 192)">
+                <path d="M26-177l6-4v16l-6-4V-177z M24-177v8c0,2.209-1.791,4-4,4H4c-2.209,0-4-1.791-4-4v-8c0-2.209,1.791-4,4-4h10 c0-1.105,0.895-2,2-2v-2H5c-0.553,0-1-0.447-1-1s0.447-1,1-1h12c0.553,0,1,0.447,1,1v3c1.105,0,2,0.895,2,2 C22.209-181,24-179.209,24-177z M12-177H4v8h8V-177z M20-176c0-0.553-0.447-1-1-1h-4c-0.553,0-1,0.447-1,1s0.447,1,1,1h4 C19.553-175,20-175.447,20-176z"/>
+              </g>
+            </svg>
+          </div>
           <span class="production__name">Процесс производства</span>
-          <img class="production__image" src="img/video-mobile@1x.jpg" alt="Видео процесса производства">
+          <div class="production__video preview-video">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
+              <img class="preview-video__image" src="img/video-mobile@1x.jpg" alt="Видео процесса производства">
+            </picture>
+            <a class="preview-video__button" href="#"><img src="../img/icon-play.svg" alt="search"></a>
+          </div>
           <p class="page-text production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="button" href="#">Сделать заказ</a>
+          <a class="button button__production" href="#">Сделать заказ</a>
         </section>
 
-        <section class="pop-up hidden">
+        <section class="pop-up pop-up-hidden">
           <span class="pop-up__header">Добавить в корзину</span>
           <span class="page-text">Выберите размер:</span>
           <form class="pop-up__choice-size form" action="index.html" method="post">
             <fieldset>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory">
-                <label class="caption" for="accessory">S</label>
+                <input class="input-size" type="radio" name="accessory" value="s" id="accessory-s">
+                <label class="caption" for="accessory-s">S</label>
               </div>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory">
-                <label class="caption" for="accessory">M</label>
+                <input class="input-size" type="radio" name="accessory" value="m" id="accessory-m">
+                <label class="caption" for="accessory-m">M</label>
               </div>
               <div class="form__item-size">
-                <input class="input-size" type="radio" id="accessory">
-                <label class="caption" for="accessory">L</label>
+                <input class="input-size" type="radio" name="accessory" value="l" id="accessory-l">
+                <label class="caption" for="accessory-l">L</label>
               </div>
             </fieldset>
             <button class="button button--aqua" type="submit" name="button">Добавить</button>
@@ -116,7 +154,10 @@
 
     <footer class="page-footer">
 
-      <div class="container">
+      <div class="container page-footer__inner">
+        <a class="page-footer__logo">
+          <img class="logo-mishka" src="img/logo-footer.svg" width="" height="">
+        </a>
         <ul class="page-footer__social social">
           <li class="social__item">
             <a class="social__link">

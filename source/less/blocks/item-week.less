@@ -1,0 +1,146 @@
+.item-week {
+  padding-top: 30px;
+  padding-bottom: 42px;
+}
+
+.item-week__subject {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #63d1bb;
+  display: block;
+}
+
+.item-week__price {
+  display: block;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #444444;
+  margin-bottom: 25px;
+}
+
+.item-week__header {
+  margin-bottom: 22px;
+}
+
+.item-week__name {
+  padding-bottom: 3px;
+}
+
+.item-week__text {
+  line-height: 24px;
+}
+
+.item-week__table {
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 27px;
+  margin-bottom: 28px;
+}
+
+.item-week__image {
+  display: block;
+}
+
+.item-week__product {
+  margin-top: 25px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .item-week {
+    position: relative;
+    padding-top: 23px;
+    padding-bottom: 75px;
+  }
+
+  .item-week__text {
+    line-height: 29px;
+  }
+
+  .item-week::after {
+    content: "";
+    width: 100%;
+    height: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/bg-zigzag-line.svg");
+  }
+
+  .item-week__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 49px;
+  }
+
+  .item-week__table {
+    margin-top: 45px;
+    margin-bottom: 55px;
+  }
+
+  .item-week__content {
+    position: relative;
+    padding: 0 376px 0 0;
+  }
+
+  .item-week__subject {
+    max-width: 100px;
+    text-align: center;
+    margin: 0;
+    padding-right: 14px;
+  }
+
+  .item-week__image {
+    position: absolute;
+    top: -157px;
+    right: 0;
+  }
+
+  .item-week__price {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item-week {
+    padding-top: 104px;
+    padding-left: 175px;
+    padding-bottom: 96px;
+    position: relative;
+  }
+
+  .item-week__image {
+    top: -157px;
+  }
+
+  .item-week__table {
+    margin-top: 56px;
+    margin-bottom: 110px;
+  }
+
+  .item-week__subject {
+    position: absolute;
+    top: 120px;
+    left: 33px;
+    line-height: 17px;
+  }
+
+  .item-week__content {
+    padding: 0 588px 0 0;
+  }
+
+  .item-week__text {
+    line-height: 30px;
+  }
+
+  .item-week__header {
+    margin-bottom: 46px;
+  }
+}

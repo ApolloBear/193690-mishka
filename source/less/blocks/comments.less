@@ -1,0 +1,66 @@
+.comments {
+  padding-top: 28px;
+  padding-bottom: 51px;
+}
+
+.comments__title {
+  margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .comments {
+    padding-top: 76px;
+    padding-bottom: 83px;
+    padding-left: 50px;
+    margin-left: -50px;
+    position: relative;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left 0;
+  }
+
+  .comments::after {
+    content: "";
+    width: 100%;
+    height: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/bg-zigzag-line.svg");
+  }
+
+  .comments__button {
+    position: absolute;
+    top: 79px;
+    right: 0;
+    width: 171px;
+  }
+
+  .comments__list {
+    position: relative;
+    order: 2;
+  }
+
+  .comments__title {
+    padding-bottom: 50px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments {
+    padding-left: 175px;
+    padding-top: 73px;
+    padding-bottom: 110px;
+    padding-right: 105px;
+    margin: 0;
+  }
+
+  .comments__button {
+    top: 80px;
+  }
+
+  .comments__title {
+    padding-bottom: 49px;
+  }
+}

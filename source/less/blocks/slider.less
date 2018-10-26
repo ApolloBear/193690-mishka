@@ -1,0 +1,39 @@
+.slider__controls {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.slider__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  width: 50%;
+  max-width: 128px;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__controls {
+    position: absolute;
+    bottom: 15px;
+    right: 19px;
+  }
+
+  .slider__button {
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+  }
+
+  .slider__button--right {
+    margin-left: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__controls {
+    position: absolute;
+    bottom: 59px;
+    right: -86px;
+  }
+}
