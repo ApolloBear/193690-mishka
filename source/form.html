@@ -12,7 +12,11 @@
     <header class="page-header">
       <div class="container">
         <a class="page-header__logo" href="#">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="logo">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>

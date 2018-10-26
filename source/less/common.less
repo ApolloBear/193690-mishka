@@ -27,14 +27,14 @@ body {
   text-transform: uppercase;
   color: #444444;
   text-decoration: none;
-  padding-top: 17px;
+  padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;
   background: #ffffff;
   border: 2px solid #444444;
   margin: 0 auto;
   width: 100%;
-  max-width: 260px;
+  max-width: 256px;
 
   &--aqua {
     background: #63d1bb;
@@ -57,7 +57,11 @@ body {
   font-weight: bold;
   color: #000000;
   margin: 0;
-  // text-align: left;
+
+  &--contact {
+    font-size: 18px;
+    line-height: 17px;
+  }
 }
 
 .caption {
@@ -119,8 +123,8 @@ body {
   margin: 0;
 
   &--toys {
-    padding-top: 72px;
-    margin-bottom: 119px;
+    padding-top: 70px;
+    margin-bottom: 120px;
   }
 
   &--no-background {
@@ -156,6 +160,10 @@ body {
   max-width: 1050px;
 
   @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding: 0 50px;
   }
 }
@@ -225,11 +233,6 @@ body {
   .page-text {
     font-size: 17px;
 
-    &--table {
-      font-size: 15px;
-      line-height: 20px;
-    }
-
     &--required {
       position: absolute;
       top: 175px;
@@ -240,6 +243,11 @@ body {
   .page-subtitle {
     font-size: 43px;
     line-height: 50px;
+
+    &--contact {
+      font-size: 42px;
+      line-height: 32px;
+    }
   }
 
   .page-head--toys {
@@ -254,8 +262,8 @@ body {
   }
 
   .page-title--toys {
-    padding-top: 159px;
-    margin-bottom: 367px;
+    padding-top: 153px;
+    margin-bottom: 371px;
   }
 
   .hidden {
@@ -272,6 +280,10 @@ body {
     // padding-top: 103px;
     // padding-bottom: 98px;
     position: relative;
+  }
+
+  .page-title--toys {
+    margin-bottom: 358px;
   }
 
   .page-head--line::before {
@@ -305,6 +317,12 @@ body {
     font-size: 53px;
     line-height: 57px;
     z-index: 1;
+
+    &--contact {
+      font-size: 53px;
+      line-height: 57px;
+      z-index: 1;
+    }
   }
 
   .page-head--toys {

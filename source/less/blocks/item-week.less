@@ -1,5 +1,5 @@
 .item-week {
-  padding-top: 32px;
+  padding-top: 30px;
   padding-bottom: 42px;
 }
 
@@ -18,19 +18,25 @@
   line-height: 24px;
   font-weight: bold;
   color: #444444;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 }
 
 .item-week__header {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .item-week__name {
-  padding-bottom: 10px;
+  padding-bottom: 3px;
+}
+
+.item-week__text {
+  line-height: 24px;
 }
 
 .item-week__table {
   width: 100%;
+  font-size: 15px;
+  line-height: 20px;
   margin-top: 27px;
   margin-bottom: 28px;
 }
@@ -40,14 +46,19 @@
 }
 
 .item-week__product {
-  margin-top: 27px;
+  margin-top: 25px;
   text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .item-week {
     position: relative;
+    padding-top: 23px;
     padding-bottom: 75px;
+  }
+
+  .item-week__text {
+    line-height: 29px;
   }
 
   .item-week::after {
@@ -64,28 +75,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 49px;
   }
 
   .item-week__table {
-    margin-top: 40px;
-    margin-bottom: 58px;
+    margin-top: 45px;
+    margin-bottom: 55px;
   }
 
   .item-week__content {
     position: relative;
-    padding: 0 334px 0 0;
+    padding: 0 376px 0 0;
   }
 
   .item-week__subject {
-    margin: 0;
     max-width: 100px;
     text-align: center;
+    margin: 0;
+    padding-right: 14px;
   }
 
   .item-week__image {
     position: absolute;
     top: 0;
     right: 0;
+        top: -157px;
   }
 
   .item-week__price {
@@ -97,10 +111,14 @@
 
 @media (min-width: @desktop-width) {
   .item-week {
-    padding-top: 132px;
+    padding-top: 104px;
     padding-left: 175px;
     padding-bottom: 96px;
     position: relative;
+  }
+
+  .item-week__image {
+    top: -157px;
   }
 
   .item-week__table {
@@ -110,16 +128,20 @@
 
   .item-week__subject {
     position: absolute;
-    top: 149px;
-    left: 38px;
+    top: 120px;
+    left: 33px;
     line-height: 17px;
   }
 
   .item-week__content {
-    padding: 0 525px 0 0;
+    padding: 0 588px 0 0;
   }
 
   .item-week__text {
     line-height: 30px;
+  }
+
+  .item-week__header {
+    margin-bottom: 46px;
   }
 }

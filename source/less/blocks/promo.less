@@ -10,7 +10,7 @@
   color: #ffffff;
   text-decoration: none;
   padding-top: 28px;
-  padding-bottom: 27px;
+  padding-bottom: 28px;
   padding-left: 30px;
   padding-right: 150px;
   position: relative;
@@ -22,6 +22,12 @@
   &--toy {
     background: #56c3b2;
   }
+
+// .promo__img {
+//   position: absolute;
+//   top: 20px;
+//   right: 40px;
+// }
 
   &--interior::after {
     position: absolute;
@@ -82,5 +88,14 @@
 @media (min-width: @desktop-width) {
   .promo {
     margin: 0;
+  }
+
+  .promo__link {
+    font-size: 20px;
+    line-height: 30px;
+    width: 50%;
+    padding-top: 27px;
+    padding-left: 35px;
+    padding-bottom: 51px;
   }
 }
