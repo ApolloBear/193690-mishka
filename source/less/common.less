@@ -10,10 +10,12 @@ body {
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  margin: 0;
 
   &--required {
     font-size: 14px;
     line-height: 16px;
+    margin-bottom: 34px;
   }
 }
 
@@ -25,20 +27,28 @@ body {
   text-transform: uppercase;
   color: #444444;
   text-decoration: none;
-  padding-top: 17px;
+  padding-top: 16px;
   padding-bottom: 16px;
-  margin-bottom: 39px;
-  border: 1px solid #444444;
   text-align: center;
+  background: #ffffff;
+  border: 2px solid #444444;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 256px;
 
   &--aqua {
     background: #63d1bb;
     margin: 0 auto;
   }
+
+  @media (min-width: @tablet-width) {
+    max-width: 288px;
+  }
 }
 
 .link {
   color: #444444;
+  text-decoration: none;
 }
 
 .page-subtitle {
@@ -46,7 +56,18 @@ body {
   line-height: 30px;
   font-weight: bold;
   color: #000000;
-  margin-top: 32px;
+  margin: 0;
+
+  &--contact {
+    font-size: 18px;
+    line-height: 17px;
+  }
+}
+
+.textarea {
+  border: 2px solid black;
+  width: 100%;
+  min-height: 133px;
 }
 
 .caption {
@@ -54,10 +75,58 @@ body {
   line-height: 16px;
   font-weight: bold;
   color: #000000;
+  margin-bottom: 21px;
 
   &--legend {
+    margin-bottom: 27px;
     text-transform: uppercase;
     color: #63d1bb;
+  }
+
+  &--telefon {
+    margin-bottom: 22px;
+  }
+
+  &--mail {
+    margin-bottom: 22px;
+  }
+
+  &--color {
+    margin-bottom: 35px;
+  }
+
+  &--fio {
+    margin-bottom: 31px;
+  }
+
+  &--block {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &--label {
+    padding-left: 59px;
+    padding-top: 8px;
+  }
+}
+
+.caption__line {
+  height: 2px;
+  width: 100%;
+  background: #63d1bb;
+  margin-left: 18px;
+  margin-top: 9px;
+}
+
+.input-text {
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 16px;
+  width: 100%;
+  background: transparent;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 21px;
   }
 }
 
@@ -65,28 +134,9 @@ body {
   background: #f1f1f1;
 
   &--toys {
-    height: 320px;
     background: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center 0;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-head--toys {
-    height: 626px;
-    background: url("../img/hero-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-head--toys {
-    height: 626px;
-    background: url("../img/hero-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center 0;
+    background-position: center -18px;
   }
 }
 
@@ -96,14 +146,240 @@ body {
   font-weight: bold;
   color: #000000;
   text-align: center;
+  margin: 0;
+
+  &--toys {
+    padding-top: 70px;
+    margin-bottom: 120px;
+  }
+
+  &--no-background {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: none;
+  padding: 0;
+  white-space: none;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.map-position {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 30px;
-  max-width: 1150px;
+  max-width: 1050px;
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
+  }
+}
+
+.basket-text {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .caption {
+    font-size: 17px;
+    line-height: 16px;
+  }
+
+  .caption-checkbox {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .caption-radio {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .caption--type {
+    top: 75px;
+    left: 0;
+  }
+
+  .caption--color {
+    top: 64px;
+    left: 0;
+  }
+
+  .caption--fio {
+    top: 65px;
+    left: 0;
+  }
+
+  .caption--telefon {
+    top: 65px;
+    left: 0;
+  }
+
+  .caption--mail {
+    top: 10px;
+    left: 0;
+  }
+
+  .caption--block {
+    margin-right: 20px;
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .caption--optionally {
+    top: 68px;
+    left: 0;
+  }
+
+  .caption--legend::after {
+    display: none;
+  }
+
+  // .caption--legend {
+  //   font-size: 17px;
+  //   line-height: 16px;
+  // }
+
+  .search-text {
+    display: none;
+  }
+
+  .page-head {
+    position: relative;
+  }
+
+  .page-head--line::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: 100%;
+    background: url("../img/bg-zigzag-fill.svg");
+  }
+
+  .page-title--no-background {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .page-text {
+    font-size: 17px;
+
+    &--required {
+      position: absolute;
+      top: 261px;
+      right: 50px;
+    }
+  }
+
+  .page-subtitle {
+    font-size: 43px;
+    line-height: 50px;
+
+    &--contact {
+      font-size: 42px;
+      line-height: 32px;
+    }
+  }
+
+  .page-head--toys {
+    background: url("../img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
+
+  .page-title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page-title--toys {
+    padding-top: 153px;
+    margin-bottom: 371px;
+  }
+
+  .hidden {
+    display: flex;
+  }
+
+  .basket-text {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-head {
+    // padding-top: 103px;
+    // padding-bottom: 98px;
+    position: relative;
+  }
+
+  .page-title--toys {
+    margin-bottom: 358px;
+  }
+
+  .page-head--line::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: 100%;
+    background: url("../img/bg-zigzag-fill.svg");
+  }
+
+  .page-text {
+    line-height: 30px;
+  }
+
+  .map-position {
+    width: auto;
+  }
+
+  .button {
+    line-height: 20px;
+  }
+
+  .page-title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page-subtitle {
+    font-size: 53px;
+    line-height: 57px;
+    z-index: 1;
+
+    &--contact {
+      font-size: 53px;
+      line-height: 57px;
+      z-index: 1;
+    }
+  }
+
+  .page-head--toys {
+    background: url("../img/hero-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
   }
 }

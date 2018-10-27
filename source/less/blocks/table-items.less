@@ -1,0 +1,17 @@
+.table-items {
+  display: flex;
+  flex-direction: column;
+  vertical-align: baseline;
+}
+
+@media (min-width: @tablet-width) {
+  .table-items {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table-items {
+    flex-direction: column;
+  }
+}

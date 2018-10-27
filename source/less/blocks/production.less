@@ -1,0 +1,128 @@
+.production {
+  padding-top: 28px;
+  padding-bottom: 32px;
+  border: 1px solid #ededed;
+  margin-bottom: 58px;
+  position: relative;
+}
+
+.production__name {
+  display: block;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+  padding-bottom: 22px;
+  padding-left: 90px;
+  text-align: left;
+}
+
+.production__svg-video {
+  position: absolute;
+  top: 33px;
+  left: 33px;
+}
+
+.production__video {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.preview-video__image {
+  width: 100%;
+}
+
+.preview-video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button__production {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  max-width: 190px;
+}
+
+.production__text {
+  font-size: 13px;
+  line-height: 24px;
+  padding-bottom: 24px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .production {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-bottom: 46px;
+  }
+
+  .production__name {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 35px;
+    padding-left: 63px;
+    padding-bottom: 32px;
+  }
+
+  .production__svg-video {
+    top: 487px;
+    left: 41px;
+  }
+
+  .production__text {
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 34px;
+  }
+
+  .production__video {
+    margin: 0 -42px;
+    order: -1;
+  }
+
+  .button__production {
+    width: 100%;
+    max-width: 580px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    position: relative;
+    padding-left: 760px;
+    padding-right: 57px;
+    padding-bottom: 58px;
+    margin-bottom: 104px;
+  }
+
+  .production__name {
+    padding-top: 95px;
+    padding-left: 0;
+  }
+
+  .production__text {
+    padding-bottom: 45px;
+  }
+
+  .production__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .production__svg-video {
+    position: absolute;
+    top: 41px;
+    left: 761px;
+  }
+}
