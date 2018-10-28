@@ -1,5 +1,5 @@
 .production {
-  padding-top: 28px;
+  padding-top: 26px;
   padding-bottom: 32px;
   border: 1px solid #ededed;
   margin-bottom: 58px;
@@ -37,11 +37,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  &:hover .btn-preview {
+    width: 120%;
+  }
+
+  &:active .btn-preview {
+    width: 80%;
+    fill: #d0f1ea;
+  }
 }
 
 .button__production {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  font-size: 17px;
+  line-height: 16px;
+  padding-top: 18px;
+  padding-bottom: 14px;
   max-width: 190px;
 }
 
@@ -124,5 +135,10 @@
     position: absolute;
     top: 41px;
     left: 761px;
+  }
+
+  .button__production {
+    padding-top: 16px;
+    padding-bottom: 17px;
   }
 }

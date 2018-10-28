@@ -11,25 +11,30 @@
   font-weight: normal;
   display: block;
   border-bottom: 1px solid black;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
   margin-bottom: 20px;
 }
 
 .catalog__item {
   border: 1px solid #ededed;
   margin-bottom: 30px;
+
+  // &:nth-child(2) {
+  //   margin-bottom: 33px;
+  // }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.catalog__item:last-child {
-  margin-bottom: 0;
-}
 
 .catalog-item__info {
   position: relative;
   padding-top: 25px;
   padding-left: 28px;
   padding-right: 28px;
-  padding-bottom: 24px;
+  padding-bottom: 26px;
 }
 
 .catalog-item__name {
@@ -50,8 +55,8 @@
 
 .catalog-item__link {
   position: absolute;
-  bottom: 24px;
-  right: 25px;
+  bottom: 27px;
+  right: 26px;
 }
 
 .catalog-item__line {
@@ -72,15 +77,16 @@
 
   .catalog-item__name {
     font-size: 20px;
-    padding-bottom: 7px;
+    padding-bottom: 6px;
+    margin-left: -8px;
   }
 
   .catalog-item__info {
-    width: 52%;
-    padding-top: 25px;
-    padding-left: 30px;
+    width: 50%;
+    padding-top: 27px;
+    padding-left: 34px;
     padding-right: 36px;
-    padding-bottom: 23px;
+    padding-bottom: 0;
   }
 
   .catalog-item__image {
@@ -90,7 +96,7 @@
   .catalog__item {
     display: flex;
     flex-direction: row;
-    margin-bottom: 55px;
+    margin-bottom: 51px;
   }
 
   .photo__catalog {
@@ -105,14 +111,15 @@
   }
 
   .catalog-item__link {
-    bottom: 27px;
+    bottom: 24px;
     right: 31px;
   }
 
   .catalog-item__text {
     font-size: 15px;
     padding-bottom: 174px;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
+    margin-left: -8px;
 
     &--last-item {
       font-size: 15px;
@@ -127,7 +134,7 @@
 @media (min-width: @desktop-width) {
   .catalog {
     flex-direction: row;
-    padding-top: 138px;
+    padding-top: 120px;
     padding-bottom: 59px;
   }
 
@@ -142,7 +149,7 @@
     padding-bottom: 38px;
 
     &--last-item {
-      padding-bottom: 14px;
+      padding-bottom: 13px;
     }
   }
 
@@ -152,9 +159,19 @@
 
   .catalog-item__info {
     width: 80%;
+    padding-bottom: 24px;
   }
 
   .catalog-item__image {
     width: 100%;
+  }
+
+  .catalog-item__price {
+    margin-left: -8px;
+  }
+
+  .catalog-item__link {
+    bottom: 25px;
+    right: 40px;
   }
 }

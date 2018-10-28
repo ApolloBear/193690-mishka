@@ -21,8 +21,8 @@ body {
 
 .button {
   display: block;
-  font-size: 17px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
   color: #444444;
@@ -44,11 +44,23 @@ body {
   @media (min-width: @tablet-width) {
     max-width: 288px;
   }
+
+  &:hover {
+    background: #444444;
+    color: #ececec;
+  }
+
+  &:active {
+    background: #444444;
+    color: #656565;
+  }
 }
 
 .link {
   color: #444444;
   text-decoration: none;
+  border-bottom: 1px solid #62d1ba;
+  padding-bottom: 3px;
 }
 
 .page-subtitle {
@@ -150,12 +162,12 @@ body {
 
   &--toys {
     padding-top: 70px;
-    margin-bottom: 120px;
+    margin-bottom: 122px;
   }
 
   &--no-background {
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 71px;
+    padding-bottom: 74px;
   }
 }
 
@@ -254,11 +266,6 @@ body {
     display: none;
   }
 
-  // .caption--legend {
-  //   font-size: 17px;
-  //   line-height: 16px;
-  // }
-
   .search-text {
     display: none;
   }
@@ -315,7 +322,7 @@ body {
 
   .page-title--toys {
     padding-top: 153px;
-    margin-bottom: 371px;
+    margin-bottom: 375px;
   }
 
   .hidden {
@@ -325,17 +332,24 @@ body {
   .basket-text {
     display: inline;
   }
+
+  .logo-mishka {
+    margin-top: -8px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-head {
-    // padding-top: 103px;
-    // padding-bottom: 98px;
     position: relative;
   }
 
+  .page-title--no-background {
+    padding-bottom: 112px;
+  }
+
   .page-title--toys {
-    margin-bottom: 358px;
+    margin-bottom: 359px;
+    padding-left: 5px;
   }
 
   .page-head--line::before {
@@ -350,6 +364,14 @@ body {
 
   .page-text {
     line-height: 30px;
+  }
+
+  .caption--type {
+    left: 62px;
+  }
+
+  .caption--color {
+    left: 58px;
   }
 
   .map-position {
@@ -381,5 +403,42 @@ body {
     background: url("../img/hero-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
+  }
+
+  .caption--fio {
+    top: 68px;
+    left: 60px;
+  }
+
+  .caption--block {
+    margin-right: 25px;
+  }
+
+  .caption--optionally {
+    left: -115px;
+  }
+
+  .container--form {
+    padding-left: 250px;
+    padding-right: 255px;
+  }
+
+  .page-text--required {
+    top: 252px;
+    right: 247px;
+  }
+
+  .caption--telefon {
+    top: 68px;
+    left: 60px;
+  }
+
+  .caption--mail {
+    top: 11px;
+    left: 61px;
+  }
+
+  .logo-mishka {
+    margin-top: -12px;
   }
 }
